@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on win32)" generated="20210504 22:55:42.745" rpa="false" schemaversion="2">
+<suite id="s1" name="UserAccountsTest" source="C:\Python38-32\Scripts\UserAccountsTest\UserAccountsTest.robot">
+<test id="s1-t1" name="Scenario 1">
+<kw name="Given User can access the API">
+<kw name="Connect to WebService">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:42.925" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20210504 22:55:42.924" endtime="20210504 22:55:42.925"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>connectToAPI</arg>
+<arg>${HOST}</arg>
+<arg>headers=${headers}</arg>
+<arg>disable_warnings=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210504 22:55:42.927" level="INFO">Creating Session using : alias=connectToAPI, url=http://localhost:8090, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210504 22:55:42.926" endtime="20210504 22:55:42.927"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.923" endtime="20210504 22:55:42.928"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.923" endtime="20210504 22:55:42.928"/>
+</kw>
+<kw name="When User fill the field id with &quot;1&quot;" sourcename="User fill the field id with &quot;${id}&quot;">
+<kw name="Send add user id request">
+<arg>${id}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${id}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.930" level="INFO">${id} = 1</msg>
+<status status="PASS" starttime="20210504 22:55:42.930" endtime="20210504 22:55:42.931"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.929" endtime="20210504 22:55:42.931"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.929" endtime="20210504 22:55:42.931"/>
+</kw>
+<kw name="And User fill the field &quot;name&quot; with &quot;Generic Name&quot;" sourcename="User fill the field &quot;name&quot; with &quot;${name}&quot;">
+<kw name="Send add user name request">
+<arg>${name}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${name}</var>
+<arg>${name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.933" level="INFO">${name} = Generic Name</msg>
+<status status="PASS" starttime="20210504 22:55:42.933" endtime="20210504 22:55:42.933"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.932" endtime="20210504 22:55:42.933"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.932" endtime="20210504 22:55:42.934"/>
+</kw>
+<kw name="And User fill the field &quot;phone&quot; with &quot;999999999&quot;" sourcename="User fill the field &quot;phone&quot; with &quot;${phone}&quot;">
+<kw name="Send add user phone request">
+<arg>${phone}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${phone}</var>
+<arg>${phone}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.936" level="INFO">${phone} = 999999999</msg>
+<status status="PASS" starttime="20210504 22:55:42.935" endtime="20210504 22:55:42.936"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.935" endtime="20210504 22:55:42.936"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.934" endtime="20210504 22:55:42.936"/>
+</kw>
+<kw name="And User fill the field &quot;email&quot; with &quot;genericname@company.com&quot;" sourcename="User fill the field &quot;email&quot; with &quot;${email}&quot;">
+<kw name="Send add user email request">
+<arg>${email}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email}</var>
+<arg>${email}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.938" level="INFO">${email} = genericname@company.com</msg>
+<status status="PASS" starttime="20210504 22:55:42.938" endtime="20210504 22:55:42.938"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.937" endtime="20210504 22:55:42.938"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.937" endtime="20210504 22:55:42.939"/>
+</kw>
+<kw name="And User fill the field &quot;address&quot; with &quot;Generic Street 42 Earth&quot;" sourcename="User fill the field &quot;address&quot; with &quot;${address}&quot;">
+<kw name="Send add user address request">
+<arg>${address}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${address}</var>
+<arg>${address}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.940" level="INFO">${address} = Generic Street 42 Earth</msg>
+<status status="PASS" starttime="20210504 22:55:42.940" endtime="20210504 22:55:42.940"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.939" endtime="20210504 22:55:42.940"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.939" endtime="20210504 22:55:42.941"/>
+</kw>
+<kw name="And User fill the field &quot;country&quot; with &quot;Navarro&quot;" sourcename="User fill the field &quot;country&quot; with &quot;${country}&quot;">
+<kw name="Send add user country request">
+<arg>${country}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${country}</var>
+<arg>${country}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.942" level="INFO">${country} = Navarro</msg>
+<status status="PASS" starttime="20210504 22:55:42.942" endtime="20210504 22:55:42.942"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.941" endtime="20210504 22:55:42.942"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.941" endtime="20210504 22:55:42.942"/>
+</kw>
+<kw name="And User fill the field &quot;department&quot; with &quot;T21R&quot;" sourcename="User fill the field &quot;department&quot; with &quot;${department}&quot;">
+<kw name="Send add user department request">
+<arg>${department}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${department}</var>
+<arg>${department}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:42.944" level="INFO">${department} = T21R</msg>
+<status status="PASS" starttime="20210504 22:55:42.944" endtime="20210504 22:55:42.944"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.943" endtime="20210504 22:55:42.944"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.943" endtime="20210504 22:55:42.944"/>
+</kw>
+<kw name="And User send this data to API (CREATE)">
+<kw name="Send data to API CREATE">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>id=${id}</arg>
+<arg>name=${name}</arg>
+<arg>phone=${phone}</arg>
+<arg>email=${email}</arg>
+<arg>address=${address}</arg>
+<arg>country=${country}</arg>
+<arg>department=${department}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:42.946" level="INFO">${body} = {'id': '1', 'name': 'Generic Name', 'phone': '999999999', 'email': 'genericname@company.com', 'address': 'Generic Street 42 Earth', 'country': 'Navarro', 'department': 'T21R'}</msg>
+<status status="PASS" starttime="20210504 22:55:42.945" endtime="20210504 22:55:42.946"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>connectToAPI</arg>
+<arg>/users</arg>
+<arg>json=${body}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210504 22:55:42.946" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.139" level="INFO">POST Request : url=http://localhost:8090/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '175'} 
+ body=b'{"id": "1", "name": "Generic Name", "phone": "999999999", "email": "genericname@company.com", "address": "Generic Street 42 Earth", "country": "Navarro", "department": "T21R"}' 
+ </msg>
+<msg timestamp="20210504 22:55:43.139" level="INFO">POST Response : url=http://localhost:8090/users 
+ status=200, reason= 
+ headers={'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Tue, 04 May 2021 21:55:43 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'} 
+ body={"id":1,"name":"Generic Name","phone":999999999,"email":"genericname@company.com","address":"Generic Street 42 Earth","country":"Navarro","department":"T21R"} 
+ </msg>
+<msg timestamp="20210504 22:55:43.139" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210504 22:55:42.946" endtime="20210504 22:55:43.139"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${expected_status}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Created</arg>
+<arg>Error</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.140" level="INFO">${expected_status} = Created</msg>
+<status status="PASS" starttime="20210504 22:55:43.139" endtime="20210504 22:55:43.140"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${message_type}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Successfully created</arg>
+<arg>User could not be created!</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.141" level="INFO">${message_type} = Successfully created</msg>
+<status status="PASS" starttime="20210504 22:55:43.140" endtime="20210504 22:55:43.141"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Returned Response: ${RESPONSE.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.142" level="INFO">Returned Response: {"id":1,"name":"Generic Name","phone":999999999,"email":"genericname@company.com","address":"Generic Street 42 Earth","country":"Navarro","department":"T21R"}</msg>
+<status status="PASS" starttime="20210504 22:55:43.141" endtime="20210504 22:55:43.142"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Response Status: ${RESPONSE.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.142" level="INFO">Response Status: 200</msg>
+<status status="PASS" starttime="20210504 22:55:43.142" endtime="20210504 22:55:43.142"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.945" endtime="20210504 22:55:43.143"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.945" endtime="20210504 22:55:43.143"/>
+</kw>
+<kw name="Then API should return Ok Created with a success message" sourcename="API should return ${expected_status} with ${message_type} message">
+<kw name="Return status code">
+<arg>${expected_status}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>status code:${expected_status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.144" level="INFO">status code:Ok Created</msg>
+<status status="PASS" starttime="20210504 22:55:43.144" endtime="20210504 22:55:43.144"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.143" endtime="20210504 22:55:43.144"/>
+</kw>
+<kw name="Message Type">
+<arg>${message_type}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Message type is:${message_type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.145" level="INFO">Message type is:a success</msg>
+<status status="PASS" starttime="20210504 22:55:43.144" endtime="20210504 22:55:43.145"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.144" endtime="20210504 22:55:43.145"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.143" endtime="20210504 22:55:43.145"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:42.921" endtime="20210504 22:55:43.145"/>
+</test>
+<test id="s1-t2" name="Scenario 2">
+<kw name="Given User can access the API">
+<kw name="Connect to WebService">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:43.148" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20210504 22:55:43.148" endtime="20210504 22:55:43.148"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>connectToAPI</arg>
+<arg>${HOST}</arg>
+<arg>headers=${headers}</arg>
+<arg>disable_warnings=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210504 22:55:43.149" level="INFO">Creating Session using : alias=connectToAPI, url=http://localhost:8090, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210504 22:55:43.148" endtime="20210504 22:55:43.149"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.148" endtime="20210504 22:55:43.149"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.147" endtime="20210504 22:55:43.149"/>
+</kw>
+<kw name="When User fill the field id with &quot;2&quot;" sourcename="User fill the field id with &quot;${id}&quot;">
+<kw name="Send add user id request">
+<arg>${id}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${id}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.150" level="INFO">${id} = 2</msg>
+<status status="PASS" starttime="20210504 22:55:43.150" endtime="20210504 22:55:43.150"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.150" endtime="20210504 22:55:43.150"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.150" endtime="20210504 22:55:43.151"/>
+</kw>
+<kw name="And User fill the field &quot;name&quot; with &quot;Kuill&quot;" sourcename="User fill the field &quot;name&quot; with &quot;${name}&quot;">
+<kw name="Send add user name request">
+<arg>${name}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${name}</var>
+<arg>${name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.152" level="INFO">${name} = Kuill</msg>
+<status status="PASS" starttime="20210504 22:55:43.152" endtime="20210504 22:55:43.152"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.152" endtime="20210504 22:55:43.153"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.151" endtime="20210504 22:55:43.153"/>
+</kw>
+<kw name="And User fill the field &quot;phone&quot; with &quot;99999999999999&quot;" sourcename="User fill the field &quot;phone&quot; with &quot;${phone}&quot;">
+<kw name="Send add user phone request">
+<arg>${phone}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${phone}</var>
+<arg>${phone}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.154" level="INFO">${phone} = 99999999999999</msg>
+<status status="PASS" starttime="20210504 22:55:43.154" endtime="20210504 22:55:43.154"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.153" endtime="20210504 22:55:43.154"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.153" endtime="20210504 22:55:43.154"/>
+</kw>
+<kw name="And User fill the field &quot;email&quot; with &quot;genericname@company.com&quot;" sourcename="User fill the field &quot;email&quot; with &quot;${email}&quot;">
+<kw name="Send add user email request">
+<arg>${email}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email}</var>
+<arg>${email}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.156" level="INFO">${email} = genericname@company.com</msg>
+<status status="PASS" starttime="20210504 22:55:43.155" endtime="20210504 22:55:43.156"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.155" endtime="20210504 22:55:43.156"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.155" endtime="20210504 22:55:43.156"/>
+</kw>
+<kw name="And User fill the field &quot;address&quot; with &quot;Generic Street 42 Hoth&quot;" sourcename="User fill the field &quot;address&quot; with &quot;${address}&quot;">
+<kw name="Send add user address request">
+<arg>${address}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${address}</var>
+<arg>${address}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.157" level="INFO">${address} = Generic Street 42 Hoth</msg>
+<status status="PASS" starttime="20210504 22:55:43.157" endtime="20210504 22:55:43.157"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.157" endtime="20210504 22:55:43.157"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.156" endtime="20210504 22:55:43.157"/>
+</kw>
+<kw name="And User fill the field &quot;country&quot; with &quot;Arvala&quot;" sourcename="User fill the field &quot;country&quot; with &quot;${country}&quot;">
+<kw name="Send add user country request">
+<arg>${country}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${country}</var>
+<arg>${country}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.159" level="INFO">${country} = Arvala</msg>
+<status status="PASS" starttime="20210504 22:55:43.159" endtime="20210504 22:55:43.159"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.158" endtime="20210504 22:55:43.159"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.158" endtime="20210504 22:55:43.159"/>
+</kw>
+<kw name="And User fill the field &quot;department&quot; with &quot;T21R&quot;" sourcename="User fill the field &quot;department&quot; with &quot;${department}&quot;">
+<kw name="Send add user department request">
+<arg>${department}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${department}</var>
+<arg>${department}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.160" level="INFO">${department} = T21R</msg>
+<status status="PASS" starttime="20210504 22:55:43.160" endtime="20210504 22:55:43.160"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.159" endtime="20210504 22:55:43.160"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.159" endtime="20210504 22:55:43.160"/>
+</kw>
+<kw name="And User send this data to API (CREATE)">
+<kw name="Send data to API CREATE">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>id=${id}</arg>
+<arg>name=${name}</arg>
+<arg>phone=${phone}</arg>
+<arg>email=${email}</arg>
+<arg>address=${address}</arg>
+<arg>country=${country}</arg>
+<arg>department=${department}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:43.162" level="INFO">${body} = {'id': '1', 'name': 'Generic Name', 'phone': '999999999', 'email': 'genericname@company.com', 'address': 'Generic Street 42 Earth', 'country': 'Navarro', 'department': 'T21R'}</msg>
+<status status="PASS" starttime="20210504 22:55:43.161" endtime="20210504 22:55:43.162"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>connectToAPI</arg>
+<arg>/users</arg>
+<arg>json=${body}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210504 22:55:43.162" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.177" level="INFO">POST Request : url=http://localhost:8090/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '175'} 
+ body=b'{"id": "1", "name": "Generic Name", "phone": "999999999", "email": "genericname@company.com", "address": "Generic Street 42 Earth", "country": "Navarro", "department": "T21R"}' 
+ </msg>
+<msg timestamp="20210504 22:55:43.177" level="INFO">POST Response : url=http://localhost:8090/users 
+ status=400, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '22', 'Date': 'Tue, 04 May 2021 21:55:43 GMT', 'Connection': 'close'} 
+ body=User 1 already exists! 
+ </msg>
+<msg timestamp="20210504 22:55:43.177" level="INFO">${RESPONSE} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20210504 22:55:43.162" endtime="20210504 22:55:43.177"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${expected_status}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Created</arg>
+<arg>Error</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.178" level="INFO">${expected_status} = Error</msg>
+<status status="PASS" starttime="20210504 22:55:43.177" endtime="20210504 22:55:43.178"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${message_type}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Successfully created</arg>
+<arg>User could not be created!</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.179" level="INFO">${message_type} = User could not be created!</msg>
+<status status="PASS" starttime="20210504 22:55:43.178" endtime="20210504 22:55:43.179"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Returned Response: ${RESPONSE.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.180" level="INFO">Returned Response: User 1 already exists!</msg>
+<status status="PASS" starttime="20210504 22:55:43.179" endtime="20210504 22:55:43.180"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Response Status: ${RESPONSE.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.180" level="INFO">Response Status: 400</msg>
+<status status="PASS" starttime="20210504 22:55:43.180" endtime="20210504 22:55:43.181"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.161" endtime="20210504 22:55:43.181"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.161" endtime="20210504 22:55:43.181"/>
+</kw>
+<kw name="Then API should return error with a message" sourcename="API should return ${expected_status} with ${message_type} message">
+<kw name="Return status code">
+<arg>${expected_status}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>status code:${expected_status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.182" level="INFO">status code:error</msg>
+<status status="PASS" starttime="20210504 22:55:43.182" endtime="20210504 22:55:43.182"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.182" endtime="20210504 22:55:43.182"/>
+</kw>
+<kw name="Message Type">
+<arg>${message_type}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Message type is:${message_type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.183" level="INFO">Message type is:a</msg>
+<status status="PASS" starttime="20210504 22:55:43.183" endtime="20210504 22:55:43.183"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.182" endtime="20210504 22:55:43.183"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.181" endtime="20210504 22:55:43.183"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.147" endtime="20210504 22:55:43.184"/>
+</test>
+<test id="s1-t3" name="Scenario 3">
+<kw name="Given User can access the API">
+<kw name="Connect to WebService">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:43.187" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20210504 22:55:43.186" endtime="20210504 22:55:43.187"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>connectToAPI</arg>
+<arg>${HOST}</arg>
+<arg>headers=${headers}</arg>
+<arg>disable_warnings=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210504 22:55:43.187" level="INFO">Creating Session using : alias=connectToAPI, url=http://localhost:8090, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210504 22:55:43.187" endtime="20210504 22:55:43.187"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.186" endtime="20210504 22:55:43.187"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.186" endtime="20210504 22:55:43.188"/>
+</kw>
+<kw name="When User fill the field id with &quot;1&quot;" sourcename="User fill the field id with &quot;${id}&quot;">
+<kw name="Send add user id request">
+<arg>${id}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${id}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.189" level="INFO">${id} = 1</msg>
+<status status="PASS" starttime="20210504 22:55:43.189" endtime="20210504 22:55:43.189"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.188" endtime="20210504 22:55:43.189"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.188" endtime="20210504 22:55:43.189"/>
+</kw>
+<kw name="And User fill the field &quot;name&quot; with &quot;Generic Name&quot;" sourcename="User fill the field &quot;name&quot; with &quot;${name}&quot;">
+<kw name="Send add user name request">
+<arg>${name}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${name}</var>
+<arg>${name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.190" level="INFO">${name} = Generic Name</msg>
+<status status="PASS" starttime="20210504 22:55:43.190" endtime="20210504 22:55:43.190"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.190" endtime="20210504 22:55:43.190"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.189" endtime="20210504 22:55:43.191"/>
+</kw>
+<kw name="And User fill the field &quot;phone&quot; with &quot;222222222&quot;" sourcename="User fill the field &quot;phone&quot; with &quot;${phone}&quot;">
+<kw name="Send add user phone request">
+<arg>${phone}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${phone}</var>
+<arg>${phone}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.192" level="INFO">${phone} = 222222222</msg>
+<status status="PASS" starttime="20210504 22:55:43.192" endtime="20210504 22:55:43.192"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.191" endtime="20210504 22:55:43.192"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.191" endtime="20210504 22:55:43.192"/>
+</kw>
+<kw name="And User fill the field &quot;email&quot; with &quot;genericname@company.com&quot;" sourcename="User fill the field &quot;email&quot; with &quot;${email}&quot;">
+<kw name="Send add user email request">
+<arg>${email}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email}</var>
+<arg>${email}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.193" level="INFO">${email} = genericname@company.com</msg>
+<status status="PASS" starttime="20210504 22:55:43.193" endtime="20210504 22:55:43.193"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.193" endtime="20210504 22:55:43.193"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.192" endtime="20210504 22:55:43.194"/>
+</kw>
+<kw name="And User fill the field &quot;address&quot; with &quot;Generic Street 42 Earth&quot;" sourcename="User fill the field &quot;address&quot; with &quot;${address}&quot;">
+<kw name="Send add user address request">
+<arg>${address}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${address}</var>
+<arg>${address}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.195" level="INFO">${address} = Generic Street 42 Earth</msg>
+<status status="PASS" starttime="20210504 22:55:43.194" endtime="20210504 22:55:43.195"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.194" endtime="20210504 22:55:43.195"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.194" endtime="20210504 22:55:43.195"/>
+</kw>
+<kw name="And User fill the field &quot;country&quot; with &quot;Navarro&quot;" sourcename="User fill the field &quot;country&quot; with &quot;${country}&quot;">
+<kw name="Send add user country request">
+<arg>${country}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${country}</var>
+<arg>${country}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.196" level="INFO">${country} = Navarro</msg>
+<status status="PASS" starttime="20210504 22:55:43.196" endtime="20210504 22:55:43.196"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.196" endtime="20210504 22:55:43.196"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.195" endtime="20210504 22:55:43.196"/>
+</kw>
+<kw name="And User fill the field &quot;department&quot; with &quot;T21R&quot;" sourcename="User fill the field &quot;department&quot; with &quot;${department}&quot;">
+<kw name="Send add user department request">
+<arg>${department}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${department}</var>
+<arg>${department}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 22:55:43.198" level="INFO">${department} = T21R</msg>
+<status status="PASS" starttime="20210504 22:55:43.197" endtime="20210504 22:55:43.198"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.197" endtime="20210504 22:55:43.198"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.197" endtime="20210504 22:55:43.198"/>
+</kw>
+<kw name="And User send this data to API (UPDATE)">
+<kw name="Send data to API UPDATE">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>id=${id}</arg>
+<arg>name=${name}</arg>
+<arg>phone=${phone}</arg>
+<arg>email=${email}</arg>
+<arg>address=${address}</arg>
+<arg>country=${country}</arg>
+<arg>department=${department}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:43.199" level="INFO">${body} = {'id': '1', 'name': 'Generic Name', 'phone': '999999999', 'email': 'genericname@company.com', 'address': 'Generic Street 42 Earth', 'country': 'Navarro', 'department': 'T21R'}</msg>
+<status status="PASS" starttime="20210504 22:55:43.199" endtime="20210504 22:55:43.199"/>
+</kw>
+<kw name="Put Request" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>connectToAPI</arg>
+<arg>/users/${id}</arg>
+<arg>json=${body}</arg>
+<doc>*DEPRECATED* Please use `PUT On Session` instead.</doc>
+<msg timestamp="20210504 22:55:43.200" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.212" level="INFO">PUT Request : url=http://localhost:8090/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '175'} 
+ body=b'{"id": "1", "name": "Generic Name", "phone": "999999999", "email": "genericname@company.com", "address": "Generic Street 42 Earth", "country": "Navarro", "department": "T21R"}' 
+ </msg>
+<msg timestamp="20210504 22:55:43.212" level="INFO">PUT Response : url=http://localhost:8090/users/1 
+ status=200, reason= 
+ headers={'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Tue, 04 May 2021 21:55:43 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'} 
+ body={"id":1,"name":"Generic Name","phone":999999999,"email":"genericname@company.com","address":"Generic Street 42 Earth","country":"Navarro","department":"T21R"} 
+ </msg>
+<msg timestamp="20210504 22:55:43.212" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210504 22:55:43.200" endtime="20210504 22:55:43.212"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${expected_status}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Updated</arg>
+<arg>Error</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.213" level="INFO">${expected_status} = Updated</msg>
+<status status="PASS" starttime="20210504 22:55:43.212" endtime="20210504 22:55:43.213"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${message_type}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Successfully updated</arg>
+<arg>User could not be updated!</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.214" level="INFO">${message_type} = Successfully updated</msg>
+<status status="PASS" starttime="20210504 22:55:43.213" endtime="20210504 22:55:43.214"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>200</arg>
+<arg>${RESPONSE.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210504 22:55:43.214" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20210504 22:55:43.214" endtime="20210504 22:55:43.214"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Returned Response: ${RESPONSE.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.215" level="INFO">Returned Response: {"id":1,"name":"Generic Name","phone":999999999,"email":"genericname@company.com","address":"Generic Street 42 Earth","country":"Navarro","department":"T21R"}</msg>
+<status status="PASS" starttime="20210504 22:55:43.214" endtime="20210504 22:55:43.215"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Response Status: ${RESPONSE.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.216" level="INFO">Response Status: 200</msg>
+<status status="PASS" starttime="20210504 22:55:43.215" endtime="20210504 22:55:43.216"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.198" endtime="20210504 22:55:43.216"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.198" endtime="20210504 22:55:43.216"/>
+</kw>
+<kw name="Then API should return Ok with a success message" sourcename="API should return ${expected_status} with ${message_type} message">
+<kw name="Return status code">
+<arg>${expected_status}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>status code:${expected_status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.217" level="INFO">status code:Ok</msg>
+<status status="PASS" starttime="20210504 22:55:43.217" endtime="20210504 22:55:43.218"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.217" endtime="20210504 22:55:43.218"/>
+</kw>
+<kw name="Message Type">
+<arg>${message_type}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Message type is:${message_type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.218" level="INFO">Message type is:a success</msg>
+<status status="PASS" starttime="20210504 22:55:43.218" endtime="20210504 22:55:43.218"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.218" endtime="20210504 22:55:43.218"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.217" endtime="20210504 22:55:43.219"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.185" endtime="20210504 22:55:43.219"/>
+</test>
+<test id="s1-t4" name="Scenario 4">
+<kw name="Given User can access the API">
+<kw name="Connect to WebService">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 22:55:43.221" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20210504 22:55:43.221" endtime="20210504 22:55:43.222"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>connectToAPI</arg>
+<arg>${HOST}</arg>
+<arg>headers=${headers}</arg>
+<arg>disable_warnings=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210504 22:55:43.222" level="INFO">Creating Session using : alias=connectToAPI, url=http://localhost:8090, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210504 22:55:43.222" endtime="20210504 22:55:43.222"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.221" endtime="20210504 22:55:43.222"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.221" endtime="20210504 22:55:43.222"/>
+</kw>
+<kw name="When User wants to delete the account with id: &quot;1&quot;" sourcename="User wants to delete the account with id: &quot;${id}&quot;">
+<kw name="Send delete user request">
+<arg>${id}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>user ${id} deleted</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.224" level="INFO">user 1 deleted</msg>
+<status status="PASS" starttime="20210504 22:55:43.223" endtime="20210504 22:55:43.224"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.223" endtime="20210504 22:55:43.224"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.223" endtime="20210504 22:55:43.224"/>
+</kw>
+<kw name="And User send this data to API (DELETE)">
+<kw name="Send data to API DELETE">
+<kw name="Delete Request" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>connectToAPI</arg>
+<arg>/users/${id}</arg>
+<doc>*DEPRECATED* Please use `DELETE On Session` instead.</doc>
+<msg timestamp="20210504 22:55:43.225" level="WARN">Keyword 'RequestsLibrary.Delete Request' is deprecated. Please use `DELETE On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.241" level="INFO">DELETE Request : url=http://localhost:8090/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20210504 22:55:43.241" level="INFO">DELETE Response : url=http://localhost:8090/users/1 
+ status=200, reason= 
+ headers={'Content-Length': '0', 'Date': 'Tue, 04 May 2021 21:55:43 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210504 22:55:43.241" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210504 22:55:43.225" endtime="20210504 22:55:43.242"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${expected_status}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Deleted</arg>
+<arg>Error</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.242" level="INFO">${expected_status} = Deleted</msg>
+<status status="PASS" starttime="20210504 22:55:43.242" endtime="20210504 22:55:43.242"/>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<var>${message_type}</var>
+<arg>${RESPONSE.status_code} == 200</arg>
+<arg>Successfully deleted</arg>
+<arg>User could not be deleted!</arg>
+<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20210504 22:55:43.243" level="INFO">${message_type} = Successfully deleted</msg>
+<status status="PASS" starttime="20210504 22:55:43.242" endtime="20210504 22:55:43.243"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>200</arg>
+<arg>${RESPONSE.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210504 22:55:43.244" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20210504 22:55:43.243" endtime="20210504 22:55:43.244"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Returned Response: ${RESPONSE.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.245" level="INFO">Returned Response: </msg>
+<status status="PASS" starttime="20210504 22:55:43.244" endtime="20210504 22:55:43.245"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Response Status: ${RESPONSE.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.245" level="INFO">Response Status: 200</msg>
+<status status="PASS" starttime="20210504 22:55:43.245" endtime="20210504 22:55:43.245"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.225" endtime="20210504 22:55:43.245"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.224" endtime="20210504 22:55:43.246"/>
+</kw>
+<kw name="Then API should return no content with a success message" sourcename="API should return ${expected_status} with ${message_type} message">
+<kw name="Return status code">
+<arg>${expected_status}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>status code:${expected_status}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.247" level="INFO">status code:no content</msg>
+<status status="PASS" starttime="20210504 22:55:43.247" endtime="20210504 22:55:43.247"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.246" endtime="20210504 22:55:43.247"/>
+</kw>
+<kw name="Message Type">
+<arg>${message_type}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Message type is:${message_type}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210504 22:55:43.248" level="INFO">Message type is:a success</msg>
+<status status="PASS" starttime="20210504 22:55:43.248" endtime="20210504 22:55:43.248"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.247" endtime="20210504 22:55:43.248"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.246" endtime="20210504 22:55:43.248"/>
+</kw>
+<status status="PASS" starttime="20210504 22:55:43.220" endtime="20210504 22:55:43.249"/>
+</test>
+<doc>These test cases created for testing User Accounts.</doc>
+<status status="PASS" starttime="20210504 22:55:42.748" endtime="20210504 22:55:43.251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="UserAccountsTest">UserAccountsTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210504 22:55:42.946" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.162" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.200" level="WARN">Keyword 'RequestsLibrary.Put Request' is deprecated. Please use `PUT On Session` instead.</msg>
+<msg timestamp="20210504 22:55:43.225" level="WARN">Keyword 'RequestsLibrary.Delete Request' is deprecated. Please use `DELETE On Session` instead.</msg>
+</errors>
+</robot>
