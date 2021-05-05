@@ -1,18 +1,17 @@
-FROM alpine
-RUN apk upgrade --no-cache \
-  && apk add --no-cache \
-    build-base \
-    python3 \
-    python3-dev \
-    bash \
-  && pip3 install robotframework \
-  && pip3 install --no-cache-dir --upgrade pip \
-  && rm -rf /var/cache/* \
-  && rm -rf /root/.cache/*
+# set base image (host OS)
+FROM python:3.8.5
 
-RUN cd /usr/bin \
-  # && ln -sf easy_install-3.5 easy_install \
-  && ln -sf python3 python \
-  && ln -sf pip3 pip
-  
-RUN python --version
+# set the working directory in the container
+WORKDIR /code
+
+# copy the dependencies file to the working directory
+COPY requirements.txt .
+
+# install dependencies
+RUN pip install -r requirements.txt
+
+# copy the content of the local src directory to the working directory
+COPY src/ .
+
+# command to run on container start
+CMD [ "python", "./server.py" ]
