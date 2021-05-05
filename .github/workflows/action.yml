@@ -24,4 +24,4 @@ jobs:
         pip install robotframework
     - name: Run RobotFramework Test Cases
       run: |
-        robot -T ..\..\UserAccountsTest\UserAccountsTest.robot
+        robot -T ..\\..\\UserAccountsTest\\UserAccountsTest.robot
