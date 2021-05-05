@@ -12,5 +12,5 @@ jobs:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
     - name: Get the output time
-      run: python --version
+      run: robot --version
       #run: echo "The time was ${{ steps.hello.outputs.time }}"
