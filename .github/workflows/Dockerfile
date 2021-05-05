@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.9
 RUN apk upgrade --no-cache \
   && apk add --no-cache \
     build-base \
@@ -15,6 +15,5 @@ RUN cd /usr/bin \
   && ln -sf python3 python \
   && ln -sf pip3 pip
   
-RUN echo `python --version`
 RUN pip --version
 RUN robot --version 
