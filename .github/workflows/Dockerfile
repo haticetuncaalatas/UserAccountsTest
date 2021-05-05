@@ -5,7 +5,7 @@ RUN apk upgrade --no-cache \
     python3 \
     python3-dev \
     bash \
-    robotframework \
+  && pip3 install robotframework \
   && pip3 install --no-cache-dir --upgrade pip \
   && rm -rf /var/cache/* \
   && rm -rf /root/.cache/*
