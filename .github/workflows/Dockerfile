@@ -14,3 +14,7 @@ RUN cd /usr/bin \
   # && ln -sf easy_install-3.5 easy_install \
   && ln -sf python3 python \
   && ln -sf pip3 pip
+  
+RUN python --version
+RUN pip --version
+RUN robot --version 
