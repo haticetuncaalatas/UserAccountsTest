@@ -15,6 +15,6 @@ RUN cd /usr/bin \
   && ln -sf python3 python \
   && ln -sf pip3 pip
   
-RUN python --version
+RUN echo `python --version`
 RUN pip --version
 RUN robot --version 
