@@ -1,5 +1,3 @@
-on: [push]
-
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
