@@ -25,6 +25,6 @@ jobs:
    # - name: Start UserAccount Project      
    #   run: mvnw spring-boot:run
    #   working-directory: ./UserAccounts
-    - name: Run RobotFramework Test Cases
-      working-directory: ./UserAccountsTest
-      run: robot -T UserAccountsTest.robot
+   # - name: Run RobotFramework Test Cases
+   #   working-directory: ./UserAccountsTest
+   #   run: robot -T UserAccountsTest.robot
