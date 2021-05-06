@@ -22,9 +22,9 @@ jobs:
       run: |
         python -m pip install -U pip
         pip install robotframework
-    - name: Start UserAccount Project      
-      run: mvnw spring-boot:run
-      working-directory: ./UserAccounts
+   # - name: Start UserAccount Project      
+   #   run: mvnw spring-boot:run
+   #   working-directory: ./UserAccounts
     - name: Run RobotFramework Test Cases
-      run: robot -T /UserAccountsTest/UserAccountsTest.robot
       working-directory: ./UserAccountsTest
+      run: robot -T /UserAccountsTest/UserAccountsTest.robot
