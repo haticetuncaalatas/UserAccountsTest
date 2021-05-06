@@ -27,4 +27,4 @@ jobs:
    #   working-directory: ./UserAccounts
     - name: Run RobotFramework Test Cases
       working-directory: ./UserAccountsTest
-      run: robot -T /UserAccountsTest/UserAccountsTest.robot
+      run: robot -T UserAccountsTest.robot
