@@ -54,6 +54,3 @@ This is automated RestAPI testing. Its using BDD (Behavior Driven Development) f
 4. See the output of tests result
 5. See the log of tests result
 6. See the report of tests result
-
-# UserAccountsTest
-User Accounts Test
